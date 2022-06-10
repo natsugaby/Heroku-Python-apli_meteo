@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Weather {% endblock %}</h1>
+    <h4>type your city here</h4>
+    <form method="POST">
+        <input name="text">
+        <input type="submit">
+    </form>
+    <br>
+<table border = "1">
+    <tr>
+    <td>{{Location}}</td>
+    <td>{{country_code}}</td>
+    <td>{{coordinate}}</td>
+    <td>{{temp}}</td>
+    <td>{{pressure}}</td>
+    <td>{{humidity}}</td>
+    <td>{{Sky}}</td>
+    <td>{{Wind}}</td> 
+    </tr>
+    <tr>
+    <td>{{Locationdata}}</td>
+    <td>{{country_codedata}}</td>
+    <td>{{coordinatedata}}</td>
+    <td>{{tempdata}}</td>
+    <td>{{pressuredata}}</td>
+    <td>{{humiditydata}}</td>
+    <td>{{Skydata}}</td>
+    <td>{{Winddata}}</td>
+    </tr>
+</table>
+<br>
+</form>
+<form method = "POST" action="/save/">
+    <input type="submit" value="Save" name ="save_buton1"></input>
+</form>
+<br>
+<h4>{{message}}</h4>
+{% endblock %}
